@@ -97,9 +97,13 @@ void* pop(ArrayList * l, int i){
   Implemente la función `void* get(ArrayList * l, int i)`. Esta función retorna el dato de la posición `i` de la lista. Si `i>=size`, entonces retorna NULL. Además, si `i<0` los valores son obtenidos desde el final hacia el principio de la lista.
 */
 void* get(ArrayList * l, int i){
-  size_t contador=0;
   if (i>=l->size)return NULL;
   if (i>=0) return l->data[i];
+  else
+  {
+    i+=l->size;
+    return l->data[i];
+  }
   
 }
 

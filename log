@@ -149,3 +149,9 @@ arraylist.c:104:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 30af430
+Wed 29 Mar 2023 11:38:41 PM UTC: 
+ arraylist.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+ tests:  8|2
+total_score: 40/70
+5248678
