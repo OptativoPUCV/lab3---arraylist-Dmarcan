@@ -155,3 +155,14 @@ Wed 29 Mar 2023 11:38:41 PM UTC:
  tests:  8|2
 total_score: 40/70
 5248678
+Wed 29 Mar 2023 11:44:28 PM UTC: 
+ arraylist.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘pop’:
+arraylist.c:103:26: error: ‘ArrayList’ {aka ‘struct ArrayList’} has no member named ‘Data’; did you mean ‘data’?
+  103 |     l->data[contador]=l->Data[contador+1];
+      |                          ^~~~
+      |                          data
+Compilation failed
+2706eea

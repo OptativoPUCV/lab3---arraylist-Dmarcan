@@ -89,9 +89,22 @@ void push(ArrayList * l, void * data, int i){
   }
 
 }
+/*
+Implemente la función `void* pop(ArrayList * l, int i)`. Esta función elimina **y retorna** el dato de la posición `i` de la lista. Valores negativos corresponden a los datos obtenidos desde el final al principio de la lista (vea la función get).
+
+    > Recuerde que al eliminar un dato, debe mover los elementos que se encuentran a la derecha, una casilla hacia la izquierda
+*/
 
 void* pop(ArrayList * l, int i){
-    return NULL;
+  void* dato=l->data[i];
+  size_t contador=i;
+  while (contador<l->size)
+  {
+    l->data[contador]=l->Data[contador+1];
+    contador++; 
+  }
+  l->size--;
+  return dato;
 }
 /*
   Implemente la función `void* get(ArrayList * l, int i)`. Esta función retorna el dato de la posición `i` de la lista. Si `i>=size`, entonces retorna NULL. Además, si `i<0` los valores son obtenidos desde el final hacia el principio de la lista.
