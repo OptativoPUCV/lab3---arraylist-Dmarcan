@@ -37,6 +37,12 @@ Implemente la función `void append(ArrayList * l, void * data)`. Esta función 
 void append(ArrayList * l, void * data){
   if (l->size==l->capacity)
   {
+    l->data=realloc(l->data,l->capacity * sizeof(void *));
+    if (l->data==NULL)
+    {
+      free(l);
+      exit(EXIT_FAILURE);
+    }
     
   }
   else
