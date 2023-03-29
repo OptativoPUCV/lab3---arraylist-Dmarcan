@@ -9,11 +9,13 @@ typedef struct ArrayList {
     int capacity;
     int size;
 } ArrayList;
-
+/*Implemente la función `ArrayList *createList()`. Esta función crea un nuevo dato de tipo ArrayList inicializando sus variables. Considere que la capacidad incial es de 2 casillas para el arreglo.
+   > Recuerde reservar memoria para el ArrayList y también para el arreglo dinámico `data`.
+*/
 ArrayList *createList(void) {
   ArrayList *list=(ArrayList *)malloc(sizeof(ArrayList));
   if (list==NULL) exit(EXIT_FAILURE);
-
+  list->data=malloc(sizeof(void *));
 
 
   
