@@ -96,15 +96,18 @@ Implemente la función `void* pop(ArrayList * l, int i)`. Esta función elimina 
 */
 
 void* pop(ArrayList * l, int i){
-  void* dato=l->data[i];
-  size_t contador=i;
-  while (contador<l->size)
+  if (l->size>1)
   {
-    l->data[contador]=l->data[contador+1];
-    contador++; 
+    void* dato=l->data[i];
+    size_t contador=i;
+    while (contador<l->size)
+    {
+      l->data[contador]=l->data[contador+1];
+      contador++; 
+    }
+    l->size--;
+    return dato;
   }
-  l->size--;
-  return dato;
 }
 /*
   Implemente la función `void* get(ArrayList * l, int i)`. Esta función retorna el dato de la posición `i` de la lista. Si `i>=size`, entonces retorna NULL. Además, si `i<0` los valores son obtenidos desde el final hacia el principio de la lista.
