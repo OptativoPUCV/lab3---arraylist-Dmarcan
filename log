@@ -42,3 +42,9 @@ Wed 29 Mar 2023 10:59:42 PM UTC:
  tests:  0|6
 total_score: 0/70
 302b532
+Wed 29 Mar 2023 11:00:47 PM UTC: 
+ arraylist.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  1|5
+total_score: 10/70
+a1bd7f8
