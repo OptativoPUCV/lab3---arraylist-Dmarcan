@@ -66,6 +66,7 @@ Implemente la función `void push(ArrayList * l, void * data, int i)`. Esta func
 */
 
 void push(ArrayList * l, void * data, int i){
+  size_t contador=l->size; 
   if (i<=l->size)
   {
     if (l->size==l->capacity)
@@ -78,11 +79,13 @@ void push(ArrayList * l, void * data, int i){
       }
       l->capacity*=2;
     }
-  
-
-
-    
-    
+    while (contador>i)
+    {
+      l->data[contador]=l->data[contador-1];
+      contador--;
+    }
+    l->data[contador]=data;
+    l->size++;
   }
 
 }
