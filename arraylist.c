@@ -93,9 +93,11 @@ void push(ArrayList * l, void * data, int i){
 void* pop(ArrayList * l, int i){
     return NULL;
 }
-
+/*
+  Implemente la función `void* get(ArrayList * l, int i)`. Esta función retorna el dato de la posición `i` de la lista. Si `i>=size`, entonces retorna NULL. Además, si `i<0` los valores son obtenidos desde el final hacia el principio de la lista.
+*/
 void* get(ArrayList * l, int i){
-    return NULL;
+    if (i>=l->size)return NULL;
 }
 
 int get_size(ArrayList * l){
