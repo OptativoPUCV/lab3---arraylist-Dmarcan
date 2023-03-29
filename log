@@ -81,3 +81,8 @@ arraylist.c:45:5: error: ‘size’ undeclared (first use in this function); did
 arraylist.c:45:5: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 c575526
+Wed 29 Mar 2023 11:06:53 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+c615ba5

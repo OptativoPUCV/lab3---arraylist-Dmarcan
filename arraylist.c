@@ -42,7 +42,7 @@ void append(ArrayList * l, void * data){
   else
   {
     l->data=data;
-    size++;
+    l->size++;
     
   }
 
