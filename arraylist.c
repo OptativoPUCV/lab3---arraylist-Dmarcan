@@ -35,31 +35,55 @@ Implemente la función `void append(ArrayList * l, void * data)`. Esta función 
     > Recuerde aumentar el valor de la variable `size`.
 */
 void append(ArrayList * l, void * data){
+  
   if (l->size==l->capacity)
   {
-    l->data=realloc(l->data,(l->capacity * 2) * sizeof(void *));
+    l->data=(void *)realloc(l->data,(l->capacity * 2) * sizeof(void *));
     if (l->data==NULL)
     {
       free(l);
       exit(EXIT_FAILURE);
     }
+    
     l->data[l->size]=data;
     l->size++;
-    //l->data[l->size]=data;
     l->capacity*=2;
   }
   else
   {
     l->data[l->size]=data;
-    l->size++;
-    
+    l->size++; 
   }
-
-
-  
 }
+/*
+Implemente la función `void push(ArrayList * l, void * data, int i)`. Esta función ingresa el dato en la `i`-ésima posición de la lista (`i=0` es la primera posición). 
+
+    > Si el arreglo está lleno, primero debe aumentar su capacidad al doble.
+
+    > Recuerde mover los elementos siguientes una casilla a la derecha.
+
+    > Si `i` es mayor a `size`, la función no debe hacer nada.
+*/
 
 void push(ArrayList * l, void * data, int i){
+  if (i<=l->size)
+  {
+    if (l->size==l->capacity)
+    {
+      l->data=(void *)realloc(l->data,(l->capacity * 2) * sizeof(void *));
+      if (l->data==NULL)
+      {
+        free(l);
+        exit(EXIT_FAILURE);
+      }
+      l->capacity*=2;
+    }
+  
+
+
+    
+    
+  }
 
 }
 
