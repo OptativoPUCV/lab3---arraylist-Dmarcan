@@ -69,3 +69,15 @@ arraylist.c:45:5: error: ‘size’ undeclared (first use in this function); did
       |     dysize
 Compilation failed
 aa09681
+Wed 29 Mar 2023 11:06:36 PM UTC: 
+ arraylist.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:45:5: error: ‘size’ undeclared (first use in this function); did you mean ‘dysize’?
+   45 |     size++;
+      |     ^~~~
+      |     dysize
+arraylist.c:45:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+c575526

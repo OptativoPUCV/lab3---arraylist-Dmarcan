@@ -35,13 +35,13 @@ Implemente la función `void append(ArrayList * l, void * data)`. Esta función 
     > Recuerde aumentar el valor de la variable `size`.
 */
 void append(ArrayList * l, void * data){
-  if (list->size==list->capacity)
+  if (l->size==l->capacity)
   {
     
   }
   else
   {
-    list->data=data;
+    l->data=data;
     size++;
     
   }
