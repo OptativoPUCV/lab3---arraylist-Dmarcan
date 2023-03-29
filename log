@@ -2,3 +2,14 @@ mi., 15 de feb. de 2023 12:35:23:
  tests:  0|6
 total_score: 0/70
 7964391
+Wed 29 Mar 2023 10:56:27 PM UTC: 
+ arraylist.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:16:1: error: control reaches end of non-void function [-Werror=return-type]
+   16 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+7332960
