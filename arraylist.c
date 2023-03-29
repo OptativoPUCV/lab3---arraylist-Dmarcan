@@ -43,9 +43,9 @@ void append(ArrayList * l, void * data){
       free(l);
       exit(EXIT_FAILURE);
     }
-    //l->data=data;
-    l->size++;
     l->data[l->size]=data;
+    l->size++;
+    //l->data[l->size]=data;
     l->capacity*=2;
   }
   else
