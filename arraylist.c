@@ -100,7 +100,7 @@ void* pop(ArrayList * l, int i){
   size_t contador=i;
   while (contador<l->size)
   {
-    l->data[contador]=l->Data[contador+1];
+    l->data[contador]=l->data[contador+1];
     contador++; 
   }
   l->size--;
