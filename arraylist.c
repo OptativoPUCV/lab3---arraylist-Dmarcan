@@ -133,12 +133,12 @@ int get_size(ArrayList * l){
 //remove elements
 void clean(ArrayList * l){
   free(l->data);
-  list->capacity=2;
-  list->size=0;
-  list->data=(void *)malloc(2 * sizeof(void *));
-  if (list->data==NULL)
+  l->capacity=2;
+  l->size=0;
+  l->data=(void *)malloc(2 * sizeof(void *));
+  if (l->data==NULL)
   {
-    free(list);
+    free(l);
     exit(EXIT_FAILURE);
   }
 }
