@@ -203,3 +203,14 @@ Wed 29 Mar 2023 11:46:38 PM UTC:
  tests:  11|1
 total_score: 50/70
 ea6338f
+Thu 30 Mar 2023 12:16:34 AM UTC: 
+ arraylist.c | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘clean’:
+arraylist.c:136:3: error: ‘list’ undeclared (first use in this function)
+  136 |   list->capacity=2;
+      |   ^~~~
+arraylist.c:136:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+1dfe275

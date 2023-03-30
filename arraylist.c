@@ -127,8 +127,18 @@ void* get(ArrayList * l, int i){
 int get_size(ArrayList * l){
     return l->size;
 }
-
+/*
+ Implemente la función `void clean(ArrayList * list)`. Esta función inicializa la capacidad y tamaño de la lista a sus valores iniciales y reduce el arreglo `data` a su tamaño inicial (2).
+*/
 //remove elements
 void clean(ArrayList * l){
-    
+  free(l->data);
+  list->capacity=2;
+  list->size=0;
+  list->data=(void *)malloc(2 * sizeof(void *));
+  if (list->data==NULL)
+  {
+    free(list);
+    exit(EXIT_FAILURE);
+  }
 }
