@@ -38,7 +38,8 @@ void append(ArrayList * l, void * data){
   
   if (l->size==l->capacity)
   {
-    l->data=(void *)realloc(l->data,(l->capacity * 2) * sizeof(void *));
+    l->capacity*=2;
+    l->data=(void *)realloc(l->data,l->capacity  * sizeof(void *));
     if (l->data==NULL)
     {
       free(l);
@@ -47,7 +48,6 @@ void append(ArrayList * l, void * data){
     
     l->data[l->size]=data;
     l->size++;
-    l->capacity*=2;
   }
   else
   {
@@ -71,13 +71,13 @@ void push(ArrayList * l, void * data, int i){
   {
     if (l->size==l->capacity)
     {
-      l->data=(void *)realloc(l->data,(l->capacity * 2) * sizeof(void *));
+      l->capacity*=2;
+      l->data=(void *)realloc(l->data,l->capacity  * sizeof(void *));
       if (l->data==NULL)
       {
         free(l);
         exit(EXIT_FAILURE);
       }
-      l->capacity*=2;
     }
     while (contador>i)
     {
@@ -135,7 +135,7 @@ void clean(ArrayList * l){
   free(l->data);
   l->capacity=2;
   l->size=0;
-  l->data=(void *)malloc(2 * sizeof(void *));
+  l->data=(void *)malloc(l->capacity * sizeof(void *));
   if (l->data==NULL)
   {
     free(l);
