@@ -84,7 +84,7 @@ void* pop(ArrayList * l, int i){
     l->size--;
     return dato;
   }
-  return NULL
+  return NULL;
 }
 
 void* get(ArrayList * l, int i){
